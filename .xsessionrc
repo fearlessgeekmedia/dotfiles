@@ -1,0 +1,4 @@
+export XDG_DATA_DIRS=/nix/var/nix/profiles/default/share:/nix/var/nix/profiles/per-user/$USER/profile/share:$XDG_DATA_DIRS
+export PATH=/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/per-user/$USER/profile/bin:$PATH
+
+nm-applet
