@@ -1,0 +1,9 @@
+# CAUTION! THIS FILE MAY BE OVERRIDDEN IN CASE OF AN UPDATE
+#          => rename/copy it when you modify something
+
+# Name: Gently
+# Author: loh.tar
+# Description: Unobtrusive and reticent but not austere
+
+noSeparator="true"
+verboseLevel="2"

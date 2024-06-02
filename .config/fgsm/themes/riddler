@@ -1,0 +1,19 @@
+# CAUTION! THIS FILE MAY BE OVERRIDDEN IN CASE OF AN UPDATE
+#          => rename/copy it when you modify something
+
+# Name: Riddler
+# Author: loh.tar
+# Description: From Gotham with love
+
+tbsmColor="${colGreen}"
+txtNormal="${txtClean}"
+infoPrefix="  ${tbsmColor}i${txtNormal} "
+warnPrefix="  ${colYello}W${txtNormal} "
+errorPrefix="  ${colRed}E${txtNormal} "
+menuPrompt="  ?"
+menuHint="  ${tbsmColor}!${txtNormal}"
+quickPrompt="  ?"
+#quickPrompt="  ? ${myName}:"
+noSeparator="true"
+noMenuHeader="true"
+verboseLevel="2"

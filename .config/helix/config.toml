@@ -1,0 +1,58 @@
+theme = "base16_terminal"
+
+[editor]
+line-number = "absolute"
+mouse = true
+# scrolloff = 5
+shell = ["sh", "-c"]
+auto-completion = true
+auto-format = true
+auto-save = false
+idle-timeout = 250
+# completion-timeout = 250
+preview-completion-insert = true
+auto-info = true
+true-color = false
+undercurl = false
+rulers = []
+bufferline = "never"
+color-modes = false
+text-width = 80
+default-line-ending = "native"
+insert-final-newline = true
+# popup-border = "none"
+# indent-heuristic = "hybrid"
+# jump-label-alphabet = "abcdefghijklmnopqrstuvwxyz"
+
+[editor.cursor-shape]
+normal = "bar"
+insert = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+enable = true
+display-messages = false
+auto-signature-help = true
+display-inlay-hints = false
+display-signature-help-docs = true
+snippets = true
+goto-reference-include-declaration = true
+
+[editor.file-picker]
+hidden = true
+follow-symlinks = true
+deduplicate-links = true
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
