@@ -1,211 +1,145 @@
 {
-    "$schema": "default.jsonc",
-    "layer": "top",
-    "position": "top",
-    "height": 30,
-    "spacing": 4,
-    "modules-left": [
-        "custom/logo",
-        "hyprland/workspaces",
-        "cava"
-    ],
-    "custom/logo": {
-        "format": "  ",
-        "on-click": "alacritty -e neofetch 2>&1 | less"
-    },
-    "hyprland/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "1": "  ",
-            "2": "",
-            "3": "󰈹",
-            "4": "",
-            "5": "5",
-            "6": "6",
-            "7": "7",
-            "8": "8",
-            "9": "9",
-            "10": "0"
-        }
-    },
-    "cava": {
-        "framerate": 60,
-        "autosens": 1,
-        "bars": 96,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 10000,
-        "method": "pulse",
-        "source": "auto",
-        "stereo": true,
-        "reverse": false,
-        "bar_delimiter": 0,
-        "monstercat": true,
-        "waves": true,
-        "noise_reduction": 0.77,
-        "input_delay": 2,
-        "format-icons": [
-            "▁",
-            "▂",
-            "▃",
-            "▄",
-            "▅",
-            "▆",
-            "▇",
-            "█"
-        ],
-        "actions": {
-            "on-click-right": "mode"
-        }
-    },
-    "modules-center": [
-        "hyprland/window"
-    ],
-    "fixed-center": true,
-    "hyprland/window": {
-        "format": "{title}",
-        "rewrite": {
-            "(.*) - Vivaldi": " 󰈹 ",
-            "(.*) - Firefox": " 󰈹 ",
-            "(.*) - Discord": " 󰙯 ",
-            "Telegram": "  ",
-            "Spotify": "  ",
-            "(.*) Visual Studio Code": " 󰨞 ",
-            "~(.*)": "  ",
-            "/(.*)": "  ",
-            "GitHub Desktop": "  ",
-            "Steam": " 󰓓 "
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "height": 30, // Waybar height (to be removed for auto height)
+    "margin": "5 20 0 20",
+        // "width": 1280, // Waybar width
+        // Choose the order of the modules
+        "modules-left": ["hyprland/workspaces", "custom/updates"],
+        "modules-center": ["clock", "custom/weather"],
+        "modules-right": ["pulseaudio", "backlight", "battery", "custom/ytube", "tray"],
+
+
+        //***************************
+        //*  Modules configuration  *
+        //***************************
+
+        "hyprland/workspaces": {
+            "disable-scroll": true,
+            "persistent-workspaces": {
+                "*": 0,
+            },
+            "active-only": false,
+            "format": "{name}: {icon}",
+            "format-icons": {
+                "1": " ",
+                "2": " ",
+                "3": " ",
+                "4": " ",
+                "5": " ",
+                "6": " ",
+                "7": " ",
+                "8": " ",
+                "9": " ",
+                "10": " "
+            }	
+        },    
+
+        "custom/updates": {
+            "format": "   {} ",
+            "interval": 7200,                     // every two hours
+            "exec": "i=$(sudo xbps-install -SuMn | awk '{print $1}'); echo \"$i\" |wc -l; echo \"$i\" |column -t |tr '\n' '\r'",       // # of updates and tooltip details
+            "exec-if": "exit 0",                  // always run; consider advanced run conditions
+            "on-click": "alacritty -e sudo xbps-install -SMu", // update system
+            "signal": 8
         },
-        "separate-outputs": true
-    },
-    "modules-right": [
-        "custom/playerctl",
-        "pulseaudio",
-        "network",
-        "cpu",
-        "memory",
-        "temperature",
-        // "backlight",
-        // "keyboard-state",
-        "battery",
-        // "battery#bat2",
-        "clock",
-        "tray"
-    ],
-    "custom/playerctl": {
-        "format": "{icon}  <span>{}</span>",
-        "return-type": "json",
-        "max-length": 50,
-        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-        "on-click-middle": "playerctl play-pause",
-        "on-click": "playerctl previous",
-        "on-click-right": "playerctl next",
-        "format-icons": {
-            "Playing": "<span foreground='#94e2d5'></span>",
-            "Paused": "<span foreground='#f38ba8'></span>"
-        }
-    },
-    "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [
-                "",
-                "",
-                ""
-            ]
+
+        "custom/mail": {
+            "format": "{} ",
+            "exec": "$HOME/.config/waybar/scripts/checkgmail.py",
+            "interval": 120,
+            "on-click": "google-chrome-stable https://mail.google.com/mail/u/0/#inbox ; pkill -SIGRTMIN+9 waybar",
+            "signal": 9,
+            "tooltip": false,
         },
-        "on-click": "pavucontrol"
-    },
-    "network": {
-        "format-wifi": "{essid} ({signalStrength}%) 󰤥",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-    "cpu": {
-        "format": "{usage}% ",
-        "tooltip": false,
-        "on-click": "alacritty -e btop"
-    },
-    "memory": {
-        "format": "{}% ",
-        "tooltip": false
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": [
-            "",
-            "",
-            ""
-        ]
-    },
-    // "backlight": {
-    //     // "device": "acpi_video1",
-    //     "format": "{percent}% {icon}",
-    //     "format-icons": [
-    //         "",
-    //         "",
-    //         "",
-    //         "",
-    //         "",
-    //         "",
-    //         "",
-    //         "",
-    //         ""
-    //     ]
-    // },
-    // "keyboard-state": {
-    //     "numlock": true,
-    //     "capslock": true,
-    //     "format": "{name} {icon}",
-    //     "format-icons": {
-    //         "locked": "",
-    //         "unlocked": ""
-    //     }
-    // },
-    // "battery": {
-    //     "states": {
-    //         // "good": 95,
-    //         "warning": 30,
-    //         "critical": 15
-    //     },
-    //     "format": "{capacity}% {icon}",
-    //     "format-charging": "{capacity}% ",
-    //     "format-plugged": "{capacity}% ",
-    //     "format-alt": "{time} {icon}",
-    //     // "format-good": "", // An empty format will hide the module
-    //     // "format-full": "",
-    //     "format-icons": [
-    //         "",
-    //         "",
-    //         "",
-    //         "",
-    //         ""
-    //     ]
-    // },
-    // "battery#bat2": {
-    //     "bat": "BAT2"
-    // },
-    "clock": {
-        "format": "{:%H:%M} ",
-        "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
-    },
-    "tray": {
-        "spacing": 10
-    }
+
+        "sway/mode": {
+            "format": "<span style=\"italic\">{}</span>"
+        },
+
+        "clock": {
+            "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+            "format": "{:%a, %d %b, %I:%M %p}"
+        },
+
+        "custom/weather": {
+            "format": "{}",
+            "tooltip": true,
+            "interval": 1800,
+            "exec": "$HOME/.config/waybar/scripts/wttr.py",
+            "return-type": "json"
+        },
+
+        "pulseaudio": {
+            // "scroll-step": 1, // %, can be a float
+            "reverse-scrolling": 1,
+            "format": "{volume}% {icon} {format_source}",
+            "format-bluetooth": "{volume}% {icon} {format_source}",
+            "format-bluetooth-muted": " {icon} {format_source}",
+            "format-muted": "婢 {format_source}",
+            "format-source": "{volume}% ",
+            "format-source-muted": "",
+            "format-icons": {
+                "headphone": "",
+                "hands-free": "",
+                "headset": "",
+                "phone": "",
+                "portable": "",
+                "car": "",
+                "default": ["奄", "奔", "墳"]
+            },
+            "on-click": "pavucontrol",
+            "min-length": 13,
+        },
+
+        "custom/mem": {
+            "format": "{} ",
+            "interval": 3,
+            "exec": "free -h | awk '/Mem:/{printf $3}'",
+            "tooltip": false,
+        },
+
+        "temperature": {
+            // "thermal-zone": 2,
+            // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+            "critical-threshold": 80,
+            // "format-critical": "{temperatureC}°C {icon}",
+            "format": "{temperatureC}°C {icon}",
+            "format-icons": ["", "", "", "", ""],
+            "tooltip": false,
+        },
+
+        "backlight": {
+            "device": "intel_backlight",
+            "format": "{percent}% {icon}",
+            "format-icons": ["","","","", "", "", ""],
+            "min-length": 7,
+        },
+
+        "battery": {
+            "states": {
+                "warning": 30,
+                "critical": 15
+            },
+            "format": " {capacity}% {icon} ",
+            "format-charging": "{capacity}% ",
+            "format-plugged": "{capacity}% ",
+            "format-alt": "{time} {icon}",
+            "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+            "on-update": "$HOME/.config/waybar/scripts/check_battery.sh",
+        },
+
+        "tray": {
+            "icon-size": 16,
+            "spacing": 4
+        },
+
+        "custom/ytube": {
+            "format": " 󰗃  {} ",
+            "interval": 15,
+            "exec": "$HOME/.local/scripts/ytsubs.sh",
+            "exec-if": "exit 0"
+        },
+
 }
+
