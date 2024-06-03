@@ -1,5 +1,5 @@
 # .bashrc
-
+export EDITOR=hx
 export PATH=$PATH:$HOME/.local/bin:$HOME/fgsm/src:$HOME/repos/bashpy
 export XBPS_DISTDIR=$HOME/repos/void-packages
 export XBPS_ALLOW_RESTRICTED=yes
@@ -69,7 +69,6 @@ function memusage {
     free -h
 }
 
-
 #FZF-relient functions
 #My file finder
 ffiles() {
@@ -85,6 +84,7 @@ fkill() {
 fcd() {
     cd "$(find "${1:-.}" -type d | sed 1d | fzf)"
 }
+
 
 #Bash history
 fhistory() {
@@ -107,7 +107,8 @@ alias home='cd ~'         # Go to home directory
 alias desktop='cd ~/Desktop'  # Go to Desktop directory
 alias s="source ~/.bashrc"
 alias sclear="clear && s"
-alias ls="eza"
+alias tldrf='tldr --list | fzf --preview "tldr {1}" --preview-window=right,60% | xargs tldr' #This does not seem to work with the latest version of TLDR. I am using tealdeer instead and it works with this.
+alias bashrcedit="hx ~/.bashrc"
 
 #The path
 export PATH=$PATH:$HOME/.local/bin
@@ -128,4 +129,5 @@ fi
 #Key bindings
 bind '"\C-r": "fhistory\n"' # CTRL + R runs the fhistory function
 bind '"\C-k": "fkill\n"'  # CTRL + K runs the fkill function
-bind '\C-f": "ffiles\n"' # CTRL + F runs the ffiles function
+bind '"\C-f": "ffiles\n"' # CTRL + F runs the ffiles nd function
+bind '"\C-b": "bashrcedit\n"' # Runs the bashrcedit alias
