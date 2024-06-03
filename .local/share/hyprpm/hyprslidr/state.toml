@@ -1,0 +1,10 @@
+[hyprslidr]
+enabled = false
+failed = false
+filename = 'hyprslidr.so'
+
+[repository]
+hash = '525921c02cdf6ef9c74857d2f0252ae61de550b1'
+name = 'hyprslidr'
+rev = ''
+url = 'https://gitlab.com/magus/hyprslidr'

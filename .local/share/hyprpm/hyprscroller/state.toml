@@ -1,0 +1,10 @@
+[hyprscroller]
+enabled = true
+failed = false
+filename = 'hyprscroller.so'
+
+[repository]
+hash = '5c01aac850c21451a5697a6fd7959424b247fe6a'
+name = 'hyprscroller'
+rev = ''
+url = 'https://github.com/dawsers/hyprscroller'
