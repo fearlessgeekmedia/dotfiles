@@ -116,7 +116,7 @@ window#waybar.hidden {
     border: solid 2px;
     border-color: #000000;
     transition: none;
-    color: #000000;
+    color: #ffffff;
     background: #474036;
 }
 
