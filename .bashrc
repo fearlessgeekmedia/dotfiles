@@ -142,7 +142,8 @@ export PATH=$PATH:$HOME/.local/bin
 
 #Activating the direnv, starship, and thefuck programs
 eval "$(direnv hook bash)"
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
+eval "$(oh-my-posh init bash)"
 eval $(thefuck --alias oops) #Alias for thefuck is "oops"
 
 
