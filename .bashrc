@@ -11,30 +11,6 @@ if [[ "$(tty)" == "/dev/tty1" ]]
  fgsm
 fi
 
-#A better cd
-#Original code for bettercd from Jake@Linux
-# https://gitlab.com/jped
-# https://www.youtube.com/@JakeLinux
-function cd () {
-    [[ $# -eq 0 ]] && return
-    builtin cd "$@"
-}
-
-function bettercd() {
-    cd $1
-    if [ -z $1 ]
-    then
-        selection="$(ls -a | fzf --height 40% --reverse)"
-        if [[ -d "$selection" ]]
-        then
-            cd "$selection"
-        elif [[ -f "$selection" ]]
-        then
-            $EDITOR "$selection"
-        fi
-    fi
-}
-
 #Makes directory and changes into it
 function mkcd {
     newDir=$1
@@ -124,7 +100,6 @@ fhistory() {
 alias ls='ls --color=auto'
 alias s='source ~/.bashrc'
 alias sclear="s && clear"
-alias cd="bettercd"
 alias ..='cd ..'          # Go up one directory
 alias ...='cd ../..'      # Go up two directories
 alias ....='cd ../../..'  # Go up three directories
@@ -143,7 +118,7 @@ export PATH=$PATH:$HOME/.local/bin
 #Activating the direnv, starship, and thefuck programs
 eval "$(direnv hook bash)"
 # eval "$(starship init bash)"
-eval "$(oh-my-posh init bash)"
+eval "$(oh-my-posh init bash --config /home/fearlessgeek/poshthemes/free-ukraine.omp.json)"
 eval $(thefuck --alias oops) #Alias for thefuck is "oops"
 
 
