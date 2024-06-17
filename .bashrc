@@ -111,6 +111,9 @@ alias tldrf='tldr --list | fzf --preview "tldr {1}" --preview-window=right,60% |
 alias bashrcedit="hx ~/.bashrc"
 alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | egrep ^/dev/ | sort" #view mounted drives
 alias cpv='rsync -ah --info=progress2'
+alias pcmanfm='devour pcmanfm'
+alias dolphin='devour dolphin'
+
 
 #The path
 export PATH=$PATH:$HOME/.local/bin
