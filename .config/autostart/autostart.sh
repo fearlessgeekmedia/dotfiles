@@ -4,7 +4,7 @@
 # exec wireplumber &
 # exec pipewire &
 exec waybar &
-exec swaybg -i /home/fearlessgeek/wallpapers/spider-punk.jpg -m fill &
+exec swaybg -i /home/fearlessgeek/wallpapers/ska2.jpg -m fill &
 exec sleep 3
 exec /usr/bin/nm-applet &
 hyprpm enable hyprbars &
