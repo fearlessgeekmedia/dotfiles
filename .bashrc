@@ -148,7 +148,7 @@ export PATH=$PATH:$HOME/.local/bin
 #Activating the direnv, starship, and thefuck programs
 eval "$(direnv hook bash)"
 # eval "$(starship init bash)"
-eval "$(oh-my-posh init bash --config ~/poshthemes/free-ukraine.omp.json)"
+eval "$(oh-my-posh init bash --config ~/poshthemes/clean-detailed.omp.json)"
 eval $(thefuck --alias oops) #Alias for thefuck is "oops"
 
 
