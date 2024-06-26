@@ -139,6 +139,8 @@ alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | eg
 alias cpv='rsync -ah --info=progress2'
 alias pcmanfm='devour pcmanfm'
 alias dolphin='devour dolphin'
+alias weather='curl https://wttr.in'
+alias wttr='curl https://wttr.in'
 
 #The path
 export PATH=$PATH:$HOME/.local/bin
