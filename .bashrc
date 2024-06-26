@@ -11,6 +11,32 @@ if [[ "$(tty)" == "/dev/tty1" ]]
  fgsm
 fi
 
+#Lines 14-38 replace cat with gum write and gum pager.
+# Clear the built-in cat command
+unalias cat 2>/dev/null
+unset -f cat 2>/dev/null
+
+# Define the custom cat function using gum write and gum pager
+cat() {
+  if [ "$#" -eq 0 ]; then
+    gum write
+    return
+  fi
+
+  if [ "$1" = ">" ] && [ -n "$2" ]; then
+    gum write > "$2"
+    return
+  fi
+
+  for file in "$@"; do
+    if [ -f "$file" ]; then
+      gum pager < "$file"
+    else
+      echo "cat: $file: No such file or directory"
+    fi
+  done
+}
+
 #Makes directory and changes into it
 function mkcd {
     newDir=$1
@@ -21,7 +47,7 @@ function mkcd {
 #sets up a python virtual environment
 function mkvenv {
     python3 -m venv $1
-    source $1/bin/activate
+a   source $1/bin/activate
 }
 
 #git commit and push
@@ -113,7 +139,6 @@ alias mnt="mount | awk -F' ' '{ printf \"%s\t%s\n\",\$1,\$3; }' | column -t | eg
 alias cpv='rsync -ah --info=progress2'
 alias pcmanfm='devour pcmanfm'
 alias dolphin='devour dolphin'
-alias cat='bat'
 
 #The path
 export PATH=$PATH:$HOME/.local/bin
