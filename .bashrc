@@ -64,6 +64,22 @@ number_guessing_game() {
 # Uncomment the line below if you want the game to start automatically when you open the terminal
 # number_guessing_game
 
+
+remind_me() {
+    if [ $# -lt 2 ]; then
+        echo "Usage: remind_me <time_in_minutes> <message>"
+        return 1
+    fi
+
+    local minutes=$1
+    shift
+    local message="$*"
+
+    (sleep "${minutes}m" && notify-send "Reminder" "$message") &
+    echo "Reminder set for $minutes minutes from now."
+}
+
+
 #Makes directory and changes into it
 function mkcd {
     newDir=$1
