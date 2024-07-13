@@ -74,8 +74,9 @@ remind_me() {
     local minutes=$1
     shift
     local message="$*"
+    local sound_file="$HOME/reminder/notify.mp3"  # Replace with your actual sound file path
 
-    (sleep "${minutes}m" && notify-send "Reminder" "$message") &
+    (sleep "${minutes}m" && notify-send "Reminder" "$message" && printf '\a' && mpv "$sound_file") &
     echo "Reminder set for $minutes minutes from now."
 }
 
@@ -182,6 +183,7 @@ alias pcmanfm='devour pcmanfm'
 alias dolphin='devour dolphin'
 alias weather='curl https://wttr.in'
 alias wttr='curl https://wttr.in'
+alias remind='remind_me'
 
 #The path
 export PATH=$PATH:$HOME/.local/bin
