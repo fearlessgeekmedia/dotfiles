@@ -37,6 +37,33 @@ cat() {
   done
 }
 
+# Number guessing game function
+number_guessing_game() {
+    local target=$((RANDOM % 100 + 1))
+    local guess=0
+    local attempts=0
+
+    echo "Welcome to the number guessing game!"
+    echo "I'm thinking of a number between 1 and 100. Can you guess what it is?"
+
+    while [[ $guess -ne $target ]]; do
+        read -p "Enter your guess: " guess
+        ((attempts++))
+        
+        if [[ $guess -lt $target ]]; then
+            echo "Too low!"
+        elif [[ $guess -gt $target ]]; then
+            echo "Too high!"
+        else
+            echo "Congratulations! You guessed the number in $attempts attempts."
+        fi
+    done
+}
+
+# Call the function to play the game
+# Uncomment the line below if you want the game to start automatically when you open the terminal
+# number_guessing_game
+
 #Makes directory and changes into it
 function mkcd {
     newDir=$1
@@ -153,14 +180,16 @@ eval $(thefuck --alias oops) #Alias for thefuck is "oops"
 
 
 #This detects if I'm using Zellij. If I'm not, it will run fastfetch. If I am using Zellij, it won't run fastfetch.
-if [ -n "$ZELLIJ" ]; then
-  clear
-else
-  fastfetch
-fi
+# if [ -n "$ZELLIJ" ]; then
+#   clear
+# else
+#    fastfetch
+# fi
 
 #Key bindings
 bind '"\C-r": "fhistory\n"' # CTRL + R runs the fhistory function
 bind '"\C-k": "fkill\n"'  # CTRL + K runs the fkill function
 bind '"\C-f": "ffiles\n"' # CTRL + F runs the ffiles nd function
 bind '"\C-b": "bashrcedit\n"' # Runs the bashrcedit alias
+
+source $HOME/fzf-obc/bin/fzf-obc.bash
