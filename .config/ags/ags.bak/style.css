@@ -1,0 +1,47 @@
+/* Base font settings */
+* {
+  font-family: "Caskaydia Cove Nerd Font", monospace;
+  font-size: 12px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+/* Solid bar background */
+.bar {
+  background-color: red; /* DEBUG */
+  padding: 0;
+  margin: 0;
+}
+
+/* All boxes inherit bar background */
+box {
+  background-color: blue; /* DEBUG */
+}
+
+button {
+  background-color: green; /* DEBUG */
+  color: #cdd6f4;
+  padding: 0 5px;
+}
+
+button:hover {
+  background-color: green; /* DEBUG */
+}
+
+button.workspace {
+  font-size: 18px;
+  padding: 0 8px;
+  margin: 0;
+}
+
+button.menu-item {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+button.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}

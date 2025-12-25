@@ -1,0 +1,51 @@
+* {
+    font-family: "Caskaydia Cove Nerd Font", monospace;
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window.bar {
+    background-color: transparent;
+    border-radius: 10%;
+}
+
+window.bar .bar-container {
+    background-color: #0f0f0f;
+    min-height: 52px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+    border-radius: 0;
+}
+
+box {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+button {
+    background-color: transparent;
+    color: #cdd6f4;
+    padding: 0 10px;
+    border-radius: 0;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+button.logo-btn {
+    padding: 6px 10px;
+}
+
+.logo-image {
+    min-width: 40px;
+    min-height: 40px;
+    background-image: url("file:///home/fearlessgeek/.config/ags/fgm-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
