@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{module=head.html}}
+  </head>
+  <body class="home">
+    {{module=header.html}}
+    
+    <div class="content">
+      <main class="main">
+        <div class="indexWrapper">
+          <div>
+            <h1 class="indexHeader" id="indexHeader">
+              <b style="font-weight:bolder">{{#if themeOptions.heroTitle}}{{themeOptions.heroTitle}}{{else}}Fearless Geek Media{{/if}}</b>
+            </h1>
+            
+            {{#if themeOptions.logo}}
+            <img src="{{themeOptions.logo}}" alt="Fearless Geek Media logo" id="homelogo"/>
+            {{/if}}
+            
+            <div id="description">{{#if themeOptions.heroSubtitle}}{{themeOptions.heroSubtitle}}{{else}}Web design and development, app development, and more!{{/if}}</div>
+          </div>
+          
+          <div class="socialNavbar">
+            <ul>
+              <li><a href="{{#if themeOptions.githubUrl}}{{themeOptions.githubUrl}}{{else}}https://github.com/fearlessgeekmedia{{/if}}" target="_blank" aria-label="GitHub Profile">github</a></li>
+              <li><a href="{{#if themeOptions.instagramUrl}}{{themeOptions.instagramUrl}}{{else}}https://instagram.com/fearlessgeekmedia{{/if}}" target="_blank">instagram</a></li>
+              <li><a href="{{#if themeOptions.facebookUrl}}{{themeOptions.facebookUrl}}{{else}}https://www.facebook.com/fearlessgeekmedia{{/if}}" target="_blank">facebook</a></li>
+              <li><a href="{{#if themeOptions.linktreeUrl}}{{themeOptions.linktreeUrl}}{{else}}https://linktr.ee/fearlessgeekmedia{{/if}}" target="_blank">linktree</a></li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    {{module=footer.html}}
+    
+    <script type="text/javascript">
+      new TypeIt("#indexHeader", {
+        strings: "{{#if themeOptions.heroTagline}}{{themeOptions.heroTagline}}{{else}}Code is Art{{/if}}",
+        cursorChar: "░",
+        speed: 75,
+        loop: false,
+        afterComplete: function (instance) {
+          instance.destroy();
+        }
+      }).go();
+    </script>
+  </body>
+</html> 

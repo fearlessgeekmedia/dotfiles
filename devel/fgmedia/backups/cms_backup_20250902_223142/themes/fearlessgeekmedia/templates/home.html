@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{module=head.html}}
+</head>
+<body class="home">
+    {{module=header.html}}
+    
+    <div class="content">
+        <main class="main">
+            <div class="indexWrapper">
+                <div>
+                    <h1 class="indexHeader" id="indexHeader">
+                        <b style="font-weight:bolder">Fearless Geek Media</b>
+                    </h1>
+                    
+                    {{#if logo}}
+                    <img src="{{logo}}" alt="Fearless Geek Media logo" id="homelogo"/>
+                    {{/if}}
+                    
+                    <div id="description">Web design and development, app development, and more!</div>
+                </div>
+                
+                <div class="socialNavbar">
+                    <ul>
+                        <li><a href="https://github.com/fearlessgeekmedia" target="_blank" aria-label="GitHub Profile">github</a></li>
+                        <li><a href="https://instagram.com/fearlessgeekmedia" target="_blank">instagram</a></li>
+                        <li><a href="https://www.facebook.com/fearlessgeekmedia" target="_blank">facebook</a></li>
+                        <li><a href="https://linktr.ee/fearlessgeekmedia" target="_blank">linktree</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    {{module=footer.html}}
+</body>
+</html> 

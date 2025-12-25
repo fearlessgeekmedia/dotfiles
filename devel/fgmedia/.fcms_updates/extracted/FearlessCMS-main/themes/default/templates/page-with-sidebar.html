@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{module=head.html}}
+  </head>
+  <body>
+    {{module=header.html}}
+    {{include=ad-area.html}}
+    
+    <div class="page-layout">
+      <main class="main-content">
+        <h1>{{title}}</h1>
+        {{content}}
+      </main>
+      
+      {{module=sidebar.html}}
+    </div>
+    
+    {{module=footer.html}}
+  </body>
+</html> 

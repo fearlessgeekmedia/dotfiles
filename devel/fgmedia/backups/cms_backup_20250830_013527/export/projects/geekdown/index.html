@@ -1,0 +1,122 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<title>Fearless Geek Media - Geekdown</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Professional web design and development services by Fearless Geek Media">
+<meta name="generator" content="FearlessCMS">
+
+<link rel="canonical" href="{{current_url}}">
+<link rel="stylesheet" href="/themes/fearlessgeekmedia/assets/style.css">
+
+<!-- Fira Mono font for terminal aesthetic -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- TypeIt for animated typing effect -->
+<script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
+<style>
+  
+  :root { 
+    --color-accent: #00c767; 
+  }
+  
+  
+  
+  :root { 
+    --color-secondary: #02a002; 
+  }
+  
+  
+  /* ensure global UI toggles visible if injected */
+  .fcms-theme-toggle{display:inline-flex}
+</style> 
+  <script src="https://cdn.tailwindcss.com"></script>
+<style id="fcms-nav-style">\n@media (max-width: 900px){header nav{display:none}header nav.is-open{display:block}.fcms-hamburger{display:inline-flex;gap:6px;flex-direction:column;justify-content:center;align-items:center;width:40px;height:36px;border:1px solid rgba(0,0,0,0.15);border-radius:10px;background:#fff;margin-left:6px} .fcms-hamburger span{display:block;width:20px;height:2px;background:#111;border-radius:2px}}\n@media (prefers-color-scheme: dark){@media (max-width:900px){.fcms-hamburger{background:#0f172a;border-color:rgba(255,255,255,0.25)} .fcms-hamburger span{background:#e5e7eb}}}\n@media (min-width: 901px){.fcms-hamburger{display:none !important}}\n.fcms-theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:36px;margin-left:8px;border:1px solid rgba(0,0,0,0.15);border-radius:10px;background:#fff;color:#111;font-size:16px;line-height:1} .fcms-theme-toggle:focus{outline:2px solid #6366f1; outline-offset:2px}\n@media (prefers-color-scheme: dark){.fcms-theme-toggle{background:#0f172a;border-color:rgba(255,255,255,0.25);color:#e5e7eb}}\n</style>
+<script id="fcmsThemeInit">\n(function(){\n  var root=document.documentElement;\n  var KEY="fcms-theme";\n  function apply(pref){\n    if(pref==="system"){root.removeAttribute("data-theme");} else {root.setAttribute("data-theme", pref);}\n  }\n  function init(){\n    var pref=localStorage.getItem(KEY)||"system"; apply(pref);\n    window.fcmsSetTheme=function(p){localStorage.setItem(KEY,p);apply(p);return p;};\n    window.fcmsCycleTheme=function(){var seq=["system","light","dark"];var cur=localStorage.getItem(KEY)||"system";var next=seq[(seq.indexOf(cur)+1)%3];localStorage.setItem(KEY,next);apply(next);return next;};\n  }\n  document.addEventListener("DOMContentLoaded", init);\n})();\n(function(){\n  function enhance(){\n    var header=document.querySelector("header"); if(!header) return;\n    var nav=header.querySelector("nav"); if(!nav) return;\n    var parent=nav.parentNode;\n    var enableH=true;\n    var enableT=true;\n    if(enableH){\n      var hb=document.getElementById("fcms-hamburger");\n      if(!hb){ hb=document.createElement("button"); hb.id="fcms-hamburger"; hb.type="button"; hb.className="fcms-hamburger"; hb.setAttribute("aria-label","Toggle navigation"); hb.setAttribute("aria-expanded","false"); hb.innerHTML="<span></span><span></span><span></span>"; try{parent.insertBefore(hb, nav);}catch(e){header.appendChild(hb);} }\n      if(hb && !hb._wired){ hb.addEventListener("click", function(){ var open=nav.classList.toggle("is-open"); hb.setAttribute("aria-expanded", open); }); hb._wired=true; }\n    }\n    if(enableT){\n      var t=document.getElementById("fcms-theme-toggle");\n      if(!t){ t=document.createElement("button"); t.id="fcms-theme-toggle"; t.type="button"; t.className="fcms-theme-toggle"; t.setAttribute("aria-label","Toggle theme (system/light/dark)"); t.title="Theme"; t.textContent="◐"; try{parent.insertBefore(t, nav);}catch(e){header.appendChild(t);} }\n      if(t && !t._wired){ t.addEventListener("click", function(){ var next=window.fcmsCycleTheme?window.fcmsCycleTheme():null; t.setAttribute("data-mode", next); }); t._wired=true; }\n    }\n  }\n  document.addEventListener("DOMContentLoaded", enhance);\n})();\n</script>
+</head>
+  <body>
+    <header class="headerWrapper">
+    <div class="header">
+        <div>
+            <a class="terminal" href="/">
+                <span>home@fearlessgeekmedia.com ~ $</span>
+            </a>
+        </div>
+        <input class="side-menu" type="checkbox" id="side-menu">
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <nav class="headerLinks">
+            <ul class="main-menu"><li class=""><a href="/" class="">Home</a></li><li class=""><a href="/about" class="">About</a></li><li class=""><a href="/projects" class="">Projects</a></li><li class=""><a href="/discovery-session" class="">Discovery Session</a></li><li class=""><a href="/blog" class="">Blog</a></li><li class=""><a href="https://fearlessgeekmedia.creator-spring.com" class="" target="_blank">Fearless Geek Shop</a></li><li class=""><a href="https://ko-fi.com/fearlessgeekmedia" class="" target="_blank">Support on Ko-Fi</a></li></ul>
+        </nav>
+    </div>
+</header> 
+    
+    <div class="content">
+      <main class="main">
+        <div>
+          <div class="listHeader">
+            <h1>Geekdown</h1>
+          </div>
+          
+          <div class="listContent">
+            <hr />
+<h2>title: "GeekDown - Markdown Editor"
+template: "projects"
+date: "2025-04-12"</h2>
+<h1>GeekDown</h1>
+<p><strong>Date</strong>: April 12, 2025</p>
+<img src="/uploads/geekdown-window.png" alt="GeekDown" />
+<p>GeekDown is a markdown editor I started working on, partly to familiarize myself more with Milkdown, which I plan on using in FearlessCMS. Markdown is a language that's popular with notetaking but is also used in various documents and content management systems on the world wide web. Markdown is even used on Github.</p>
+<h2>Features</h2>
+<ul>
+    <li><strong>Markdown Editing</strong>: Full markdown syntax support</li>
+    <li><strong>Milkdown Integration</strong>: Built on the powerful Milkdown editor framework</li>
+    <li><strong>Template System</strong>: Create and use custom templates</li>
+    <li><strong>Template Tester</strong>: Test templates before using them</li>
+    <li><strong>Template Submission</strong>: Submit new templates to the community</li>
+</ul>
+<h2>Technology Stack</h2>
+<ul>
+    <li><strong>Frontend</strong>: React, TypeScript</li>
+    <li><strong>Editor</strong>: Milkdown</li>
+    <li><strong>Styling</strong>: Tailwind CSS</li>
+    <li><strong>Build Tool</strong>: Vite</li>
+</ul>
+<h2>Project Status</h2>
+<p>Currently in active development. The editor is functional with basic markdown editing capabilities and template management.</p>
+<h2>Links</h2>
+<ul>
+    <li><a href="https://github.com/fearlessgeekmedia/GeekDown">GitHub Repository</a></li>
+    <li><a href="https://geekdown.fearlessgeekmedia.com">Live Demo</a></li>
+</ul>
+<h2>Screenshots</h2>
+<img src="/uploads/geekdown-window.png" alt="GeekDown Interface" />
+<p>The interface shows a clean, modern markdown editor with syntax highlighting and real-time preview.</p> 
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    <footer class="footer">
+    <span>
+        © 2025 Fearless Geek Media, Built with
+        <a href="https://fearlesscms.com" class="footerLink">FearlessCMS</a>
+    </span>
+    
+    
+    <div class="socialNavbar">
+        <ul>
+            <li><a href="https://github.com/fearlessgeekmedia" target="_blank" aria-label="GitHub Profile">github</a></li>
+            <li><a href="https://instagram.com/fearlessgeekmedia" target="_blank">instagram</a></li>
+            <li><a href="https://www.facebook.com/fearlessgeekmedia" target="_blank">facebook</a></li>
+            <li><a href="https://linktr.ee/fearlessgeekmedia" target="_blank">linktree</a></li>
+        </ul>
+    </div>
+    
+</footer> 
+  </body>
+</html> 

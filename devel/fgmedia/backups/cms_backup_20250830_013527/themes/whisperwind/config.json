@@ -1,0 +1,33 @@
+{
+  "name": "Whisperwind",
+  "version": "1.0",
+  "author": "Fearless Geek Media",
+  "description": "A theme with elegant design.",
+  "options": {
+    "logo": {
+      "type": "image",
+      "label": "Site Logo",
+      "description": "Upload your site logo"
+    },
+    "heroBanner": {
+      "type": "image",
+      "label": "Hero Banner",
+      "description": "Upload a hero banner image for the homepage"
+    },
+    "primaryColor": {
+      "type": "color",
+      "label": "Primary Color",
+      "default": "#6366f1"
+    },
+    "fontFamily": {
+      "type": "select",
+      "label": "Font Family",
+      "options": [
+        {"value": "Inter", "label": "Inter"},
+        {"value": "Poppins", "label": "Poppins"},
+        {"value": "Roboto", "label": "Roboto"}
+      ],
+      "default": "Inter"
+    }
+  }
+}

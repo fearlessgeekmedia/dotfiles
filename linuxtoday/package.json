@@ -1,0 +1,22 @@
+{
+  "name": "linuxtoday-cli",
+  "version": "1.0.0",
+  "description": "CLI app to display Linux Today feed using Ink",
+  "type": "module",
+  "main": "index.jsx",
+  "bin": {
+    "linuxtoday": "./index.jsx"
+  },
+  "scripts": {
+    "start": "tsx index.jsx"
+  },
+  "dependencies": {
+    "ink": "^4.4.1",
+    "ink-select-input": "^5.0.0",
+    "react": "^18.2.0",
+    "rss-parser": "^3.13.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.7.0"
+  }
+}

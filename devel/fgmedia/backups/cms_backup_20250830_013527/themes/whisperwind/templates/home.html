@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {{module=head.html}}
+</head>
+
+<body>
+  {{module=header.html}}
+  {{#if heroBanner}}
+  <div class="hero-banner">
+    <img src="{{heroBanner}}" alt="Hero Banner" class="w-full h-64 object-cover">
+    <div class="hero-overlay">
+      <h1 class="text-4xl font-bold text-white">{{title}}</h1>
+    </div>
+  </div>
+  {{/if}}
+  <main class="site-content">
+    <div class="container">
+      <h1>{{title}}</h1>
+      {{content}}
+    </div>
+  </main>
+  {{module=footer.html}}
+</body>
+
+</html>

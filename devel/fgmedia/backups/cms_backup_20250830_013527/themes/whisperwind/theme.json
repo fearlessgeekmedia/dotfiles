@@ -1,0 +1,12 @@
+{
+    "name": "Whisperwind",
+    "description": "A clean and modern theme with a focus on typography and whitespace.",
+    "version": "1.1.0",
+    "author": "Fearless Geek Media",
+    "license": "MIT",
+    "templates": {
+        "home": "home.html",
+        "page": "page.html",
+        "404": "404.html"
+    }
+}

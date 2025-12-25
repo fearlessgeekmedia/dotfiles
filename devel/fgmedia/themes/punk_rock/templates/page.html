@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{module=head.html}}
+</head>
+<body>
+    {{module=header.html}}
+    {{include=ad-area.html}}
+
+    <main>
+        {{module=hero-banner.html}}
+        <div class="content">
+            <div class="main-content">
+                <h1>{{title}}</h1>
+                {{content}}
+            </div>
+        </div>
+    </main>
+
+    {{module=footer.html}}
+</body>
+</html>

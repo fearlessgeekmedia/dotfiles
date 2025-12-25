@@ -1,0 +1,29 @@
+{
+  "name": "FearlessGeekMedia",
+  "version": "1.0.0",
+  "description": "A terminal/hacker aesthetic theme for FearlessCMS, inspired by the FearlessGeekMedia website",
+  "author": "Fearless Geek Media",
+  "license": "MIT",
+  "keywords": ["terminal", "hacker", "dark", "professional", "business"],
+  "features": [
+    "Responsive design",
+    "Terminal aesthetic",
+    "Customizable colors",
+    "Social media integration",
+    "Blog support",
+    "Project showcase",
+    "Contact forms",
+    "Mobile-friendly navigation"
+  ],
+  "screenshots": [],
+  "demo": "https://fearlessgeekmedia.com",
+  "repository": "https://github.com/fearlessgeekmedia/FearlessCMS-themes",
+  "templates": {
+    "home": "home.html",
+    "page": "page.html",
+    "blog": "blog.html",
+    "post": "post.html",
+    "projects": "projects.html",
+    "404": "404.html"
+  }
+} 

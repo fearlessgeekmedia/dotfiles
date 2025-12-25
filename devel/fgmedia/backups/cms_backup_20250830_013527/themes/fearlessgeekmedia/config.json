@@ -1,0 +1,84 @@
+{
+  "name": "FearlessGeekMedia Theme",
+  "version": "1.0.0",
+  "author": "Fearless Geek Media",
+  "description": "A terminal/hacker aesthetic theme for FearlessCMS, inspired by the FearlessGeekMedia website.",
+  "options": {
+    "logo": {
+      "type": "image",
+      "label": "Logo Image"
+    },
+    "terminalBranding": {
+      "type": "text",
+      "label": "Terminal Branding",
+      "default": "home@fearlessgeekmedia.com ~ $",
+      "description": "The terminal prompt text in the header"
+    },
+    "accentColor": {
+      "type": "color",
+      "label": "Accent Color",
+      "default": "#00c767",
+      "description": "Primary green accent color"
+    },
+    "secondaryAccent": {
+      "type": "color",
+      "label": "Secondary Accent",
+      "default": "#02a002",
+      "description": "Secondary green accent color"
+    },
+    "heroTitle": {
+      "type": "text",
+      "label": "Hero Title",
+      "default": "Fearless Geek Media",
+      "description": "Main title on the home page"
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "label": "Hero Subtitle",
+      "default": "Web design and development, app development, and more!",
+      "description": "Subtitle text below the main title"
+    },
+    "heroTagline": {
+      "type": "text",
+      "label": "Hero Tagline",
+      "default": "Code is Art",
+      "description": "Animated tagline that appears after the title"
+    },
+    "showSocialLinks": {
+      "type": "checkbox",
+      "label": "Show Social Media Links",
+      "default": true,
+      "description": "Display social media links in the footer"
+    },
+    "githubUrl": {
+      "type": "text",
+      "label": "GitHub URL",
+      "default": "https://github.com/fearlessgeekmedia"
+    },
+    "instagramUrl": {
+      "type": "text",
+      "label": "Instagram URL",
+      "default": "https://instagram.com/fearlessgeekmedia"
+    },
+    "facebookUrl": {
+      "type": "text",
+      "label": "Facebook URL",
+      "default": "https://www.facebook.com/fearlessgeekmedia"
+    },
+    "linktreeUrl": {
+      "type": "text",
+      "label": "Linktree URL",
+      "default": "https://linktr.ee/fearlessgeekmedia"
+    },
+    "shopUrl": {
+      "type": "text",
+      "label": "Shop URL",
+      "default": "https://fearlessgeekmedia.creator-spring.com"
+    },
+    "koFiUrl": {
+      "type": "text",
+      "label": "Ko-Fi Support URL",
+      "default": "https://ko-fi.com/fearlessgeekmedia"
+    }
+  }
+} 

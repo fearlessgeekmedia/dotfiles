@@ -1,0 +1,15 @@
+[
+    {
+        "id": "6949ae08c5e79",
+        "username": "Will",
+        "password": "$2y$10$AZoA7WXZahtcwKqou.tY3eOVl.oEPOM5GPvV8Gqh3FErRd9ECKWp6",
+        "role": "admin",
+        "permissions": [
+            "manage_content",
+            "manage_plugins",
+            "manage_themes",
+            "manage_menus",
+            "manage_settings"
+        ]
+    }
+]

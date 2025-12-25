@@ -1,0 +1,76 @@
+{
+  "site_name": "Fearless Geek Media",
+  "site_description": "Professional web design and development, app development, and more!",
+  "site_url": "https://fearlessgeekmedia.com",
+  "theme": "fearlessgeekmedia",
+  "theme_options": {
+    "terminalBranding": "home@fearlessgeekmedia.com ~ $",
+    "accentColor": "#00c767",
+    "secondaryAccent": "#02a002",
+    "heroTitle": "Fearless Geek Media",
+    "heroSubtitle": "Web design and development, app development, and more!",
+    "heroTagline": "Code is Art",
+    "showSocialLinks": true,
+    "githubUrl": "https://github.com/fearlessgeekmedia",
+    "instagramUrl": "https://instagram.com/fearlessgeekmedia",
+    "facebookUrl": "https://www.facebook.com/fearlessgeekmedia",
+    "linktreeUrl": "https://linktr.ee/fearlessgeekmedia",
+    "shopUrl": "https://fearlessgeekmedia.creator-spring.com",
+    "koFiUrl": "https://ko-fi.com/fearlessgeekmedia"
+  },
+  "navigation": {
+    "main_menu": [
+      {
+        "title": "Home",
+        "url": "/",
+        "template": "home"
+      },
+      {
+        "title": "About",
+        "url": "/about",
+        "template": "page"
+      },
+      {
+        "title": "Projects",
+        "url": "/projects",
+        "template": "projects"
+      },
+      {
+        "title": "Discovery Session",
+        "url": "/discovery-session",
+        "template": "page"
+      },
+      {
+        "title": "Blog",
+        "url": "/blog",
+        "template": "blog"
+      }
+    ]
+  },
+  "content_structure": {
+    "pages": [
+      "home",
+      "about",
+      "projects",
+      "discovery-session",
+      "blog"
+    ],
+    "blog_posts": [
+      "fearlesscms-update-05-15"
+    ],
+    "templates": {
+      "home": "home.html",
+      "page": "page.html",
+      "blog": "blog.html",
+      "post": "post.html",
+      "projects": "projects.html",
+      "404": "404.html"
+    }
+  },
+  "seo": {
+    "meta_description": "Professional web design and development services by Fearless Geek Media. Custom websites, app development, graphic design, and digital marketing solutions.",
+    "keywords": "web design, web development, app development, graphic design, digital marketing, Salt Lake City, Utah",
+    "author": "Fearless Geek Media",
+    "robots": "index, follow"
+  }
+} 

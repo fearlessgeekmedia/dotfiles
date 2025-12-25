@@ -1,0 +1,63 @@
+{
+    "main": {
+        "label": "main",
+        "menu_class": "main-menu",
+        "items": [
+            {
+                "label": "Home",
+                "url": "\/",
+                "target": "",
+                "class": "",
+                "id": "item_0"
+            },
+            {
+                "id": "item_1",
+                "label": "About",
+                "url": "\/about",
+                "class": "",
+                "target": "",
+                "children": []
+            },
+            {
+                "id": "item_2",
+                "label": "Projects",
+                "url": "\/projects",
+                "class": "",
+                "target": "",
+                "children": []
+            },
+            {
+                "id": "item_4",
+                "label": "Discovery Session",
+                "url": "\/discovery-session",
+                "class": "",
+                "target": "",
+                "children": []
+            },
+            {
+                "id": "item_5",
+                "label": "Blog",
+                "url": "\/blog",
+                "class": "",
+                "target": "",
+                "children": []
+            },
+            {
+                "id": "item_6",
+                "label": "Fearless Geek Shop",
+                "url": "https:\/\/fearlessgeekmedia.creator-spring.com",
+                "class": "",
+                "target": "_blank",
+                "children": []
+            },
+            {
+                "id": "item_7",
+                "label": "Support on Ko-Fi",
+                "url": "https:\/\/ko-fi.com\/fearlessgeekmedia",
+                "class": "",
+                "target": "_blank",
+                "children": []
+            }
+        ]
+    }
+}

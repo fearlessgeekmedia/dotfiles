@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{module=head.html}}
+</head>
+
+<body>
+  {{module=header.html}}
+  {{include=ad-area.html}}
+  <main class="site-content">
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="page-content">
+          {{content}}
+        </div>
+        {{module=sidebar.html}}
+      </div>
+    </div>
+  </main>
+  {{module=footer.html}}
+  
+</body>
+
+</html>

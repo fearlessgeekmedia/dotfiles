@@ -1,0 +1,13 @@
+{
+  "name": "Fearless Geek Media",
+  "version": "1.0.0",
+  "author": "Fearless Geek Media",
+  "description": "Professional web design and development theme with terminal aesthetic",
+  "features": [
+    "responsive",
+    "dark-mode",
+    "terminal-aesthetic",
+    "blog-support",
+    "projects-support"
+  ]
+} 

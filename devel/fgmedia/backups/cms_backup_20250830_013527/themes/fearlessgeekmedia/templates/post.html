@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{module=head.html}}
+  </head>
+  <body>
+    {{module=header.html}}
+    
+    <div class="content">
+      <main class="main">
+        <div class="postWrapper">
+          <div class="postHeader">
+            <h1 class="postTitle">{{title}}</h1>
+            <time class="postDate" datetime="{{date}}">{{format_date date}}</time>
+          </div>
+          
+          <div class="postMetadata">
+            <dl>
+              <dt>Published</dt>
+              <dd>{{format_date date "F j, Y"}}</dd>
+              {{#if author}}
+              <dt>Author</dt>
+              <dd>{{author}}</dd>
+              {{/if}}
+              {{#if tags}}
+              <dt>Tags</dt>
+              <dd>{{#each tags}}<a href="/tag/{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}{{/each}}</dd>
+              {{/if}}
+            </dl>
+          </div>
+          
+          <div class="postContent">
+            {{content}}
+          </div>
+        </div>
+      </main>
+    </div>
+    
+    {{module=footer.html}}
+  </body>
+</html> 

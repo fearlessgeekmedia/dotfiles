@@ -1,0 +1,30 @@
+// Color settings
+cursor {
+    xcursor-theme "Bibata-Modern-Classic"
+    xcursor-size 30
+}
+
+layout {
+    background-color "transparent"
+    
+    focus-ring {
+        // Color of the ring on the active monitor.
+        active-color "#a6e3a1"
+
+        // Color of the ring on inactive monitors.
+        inactive-color "#505050"
+    }
+
+    border {
+        active-color "#ffc87f"
+        inactive-color "#505050"
+        
+        // Color of the border around windows that request your attention.
+        urgent-color "#9b0000"
+    }
+
+    shadow {
+        // You can also change the shadow color and opacity.
+        color "#0007"
+    }
+}

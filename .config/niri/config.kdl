@@ -1,0 +1,16 @@
+// EZ A RED
+// This config is in the KDL format: https://kdl.dev
+// "/-" comments out the following node.
+// Check the wiki for a full description of the configuration:
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Introduction
+
+include "startup.kdl"
+include "key-bindings.kdl"
+include "layout.kdl"
+include "colors.kdl"
+include "flags.kdl"
+include "animation.kdl"
+include "screenshot.kdl"
+include "displays.kdl"
+include "inputs.kdl"
+include "window-rules.kdl"

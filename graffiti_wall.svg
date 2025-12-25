@@ -1,0 +1,85 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="roughen">
+      <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="4" seed="2"/>
+      <feDisplacementMap in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="drip">
+      <feTurbulence type="fractalNoise" baseFrequency="0.3" numOctaves="2"/>
+      <feDisplacementMap in="SourceGraphic" scale="8"/>
+    </filter>
+    <pattern id="concrete" patternUnits="userSpaceOnUse" width="50" height="50">
+      <rect width="50" height="50" fill="#6B6B6B"/>
+      <circle cx="10" cy="10" r="2" fill="#555" opacity="0.3"/>
+      <circle cx="35" cy="25" r="3" fill="#555" opacity="0.2"/>
+      <circle cx="45" cy="40" r="1.5" fill="#555" opacity="0.4"/>
+      <path d="M5 5 Q15 8 25 6 T45 8" stroke="#555" fill="none" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Concrete wall base -->
+  <rect width="1000" height="600" fill="url(#concrete)"/>
+  <rect width="1000" height="600" fill="#696969" opacity="0.3"/>
+  
+  <!-- Dark shadows for depth -->
+  <ellipse cx="500" cy="550" rx="400" ry="40" fill="#000000" opacity="0.2"/>
+  
+  <!-- Wild style graffiti - main text -->
+  <!-- Using path-based letters for more authentic graffiti look -->
+  
+  <!-- "Ampcode" in wild style -->
+  <g filter="url(#roughen)">
+    <!-- A -->
+    <path d="M 80 250 L 150 100 L 220 250 M 110 200 L 190 200" stroke="#FF2D2D" stroke-width="35" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- m -->
+    <path d="M 260 250 L 260 120 M 280 250 L 280 160 Q 280 130 310 130 Q 335 130 335 160 L 335 250 M 360 250 L 360 160 Q 360 130 390 130 Q 415 130 415 160 L 415 250" stroke="#FF2D2D" stroke-width="35" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- p -->
+    <path d="M 450 250 L 450 100 M 450 180 Q 450 140 490 140 Q 530 140 530 180 Q 530 220 490 220 Q 450 220 450 220" stroke="#FFD700" stroke-width="35" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- c -->
+    <path d="M 580 140 Q 540 140 540 190 Q 540 240 580 240 Q 620 240 620 220" stroke="#FF2D2D" stroke-width="35" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- o -->
+    <path d="M 660 140 Q 620 140 620 190 Q 620 240 660 240 Q 700 240 700 190 Q 700 140 660 140" stroke="#FFD700" stroke-width="35" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- d -->
+    <path d="M 760 100 L 760 250 M 760 180 Q 760 140 720 140 Q 680 140 680 190 Q 680 240 720 240 Q 760 240 760 200" stroke="#FF2D2D" stroke-width="35" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- e -->
+    <path d="M 850 190 L 790 190 Q 790 150 830 140 Q 870 140 870 190 Q 870 240 830 240 Q 790 240 800 220" stroke="#FFD700" stroke-width="35" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- "is lame" below in different style -->
+  <g filter="url(#roughen)">
+    <text x="500" y="380" font-size="120" font-weight="900" font-family="Impact, Arial Black" 
+          text-anchor="middle" fill="#FFD700" opacity="0.85" font-style="italic">
+      is lame
+    </text>
+  </g>
+  
+  <!-- Paint drips from main text -->
+  <g opacity="0.7" stroke="#FF2D2D" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M 150 250 Q 145 280 140 320 Q 138 350 135 380"/>
+    <path d="M 350 250 Q 355 290 358 330 Q 360 370 362 400"/>
+    <path d="M 650 250 Q 648 290 645 340 Q 640 380 635 420"/>
+    <path d="M 800 250 Q 808 280 810 330 Q 812 370 815 400"/>
+  </g>
+  
+  <!-- Paint drips from bottom text -->
+  <g opacity="0.6" stroke="#FFD700" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M 400 380 Q 398 410 395 450 Q 392 480 390 520"/>
+    <path d="M 550 380 Q 552 420 555 460 Q 558 500 560 530"/>
+  </g>
+  
+  <!-- Some splatter effects -->
+  <g opacity="0.6">
+    <circle cx="120" cy="320" r="8" fill="#FF2D2D"/>
+    <circle cx="140" cy="300" r="6" fill="#FF2D2D"/>
+    <circle cx="280" cy="380" r="7" fill="#FFD700"/>
+    <circle cx="750" cy="450" r="9" fill="#FF2D2D"/>
+    <circle cx="820" cy="470" r="6" fill="#FFD700"/>
+    <circle cx="920" cy="250" r="5" fill="#FF2D2D"/>
+  </g>
+  
+  <!-- Some tag-style elements -->
+  <g filter="url(#roughen)" opacity="0.5">
+    <path d="M 100 480 Q 120 500 150 490" stroke="#FF2D2D" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="950" y="550" font-size="30" font-family="cursive" fill="#FFD700" opacity="0.7">~AMP</text>
+  </g>
+</svg>

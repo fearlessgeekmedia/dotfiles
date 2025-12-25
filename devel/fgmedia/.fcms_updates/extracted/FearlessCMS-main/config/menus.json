@@ -1,0 +1,15 @@
+{
+    "main": {
+        "label": "main",
+        "menu_class": "main-menu",
+        "items": [
+            {
+                "label": "Home",
+                "url": "\/",
+                "target": "",
+                "class": "",
+                "id": "item_0"
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "title": "GeekDown",
+    "url": "geekdown",
+    "date": "2025-04-12",
+    "image": "/uploads/geekdown-window.png",
+    "excerpt": "A markdown editor I started working on, partly to familiarize myself more with Milkdown, which I plan on using in FearlessCMS."
+  },
+  {
+    "title": "GeekyLibs",
+    "url": "geekylibs",
+    "date": "2025-03-15",
+    "image": "/uploads/geekylibs3.jpg",
+    "excerpt": "A collection of utility libraries and tools that help streamline common development tasks and provide reusable components for various projects."
+  },
+  {
+    "title": "FearlessCMS",
+    "url": "fearlesscms",
+    "date": "2025-01-01",
+    "image": "/uploads/fearlesscms-logo.png",
+    "excerpt": "A content management system designed to be simple, fast, and developer-friendly, built with modern web technologies."
+  },
+  {
+    "title": "xbpsman",
+    "url": "xbpsman",
+    "date": "2025-02-01",
+    "image": "/uploads/xbpsman.gif",
+    "excerpt": "A package manager interface for Void Linux systems that provides a user-friendly way to manage software packages and system updates."
+  },
+  {
+    "title": "WILLBRITRONLOGISTICS LLC",
+    "url": "willbritronlogistics",
+    "date": "2025-01-01",
+    "image": "/uploads/willbritronlogistics-website-1.png",
+    "excerpt": "A one-page parallax scrolling website for a truck dispatching company that handles tax forms for truckers."
+  },
+  {
+    "title": "Water Nexus Registry",
+    "url": "water-nexus-registry",
+    "date": "2024-12-01",
+    "image": "/uploads/water-nexus-registry.png",
+    "excerpt": "A comprehensive water resource management and monitoring system that tracks water quality and environmental data."
+  },
+  {
+    "title": "Vitchello",
+    "url": "vitchello",
+    "date": "2024-11-01",
+    "image": "/uploads/vitchello.png",
+    "excerpt": "A project management and collaboration platform designed to streamline team workflows and project tracking."
+  }
+] 

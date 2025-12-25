@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://fearlessgeekmedia.com/about</loc>
+    <lastmod>2025-07-18</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://fearlessgeekmedia.com/custom-variables-demo</loc>
+    <lastmod>2025-07-18</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://fearlessgeekmedia.com/home</loc>
+    <lastmod>2025-07-18</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://fearlessgeekmedia.com/music</loc>
+    <lastmod>2025-07-18</lastmod>
+    <priority>0.5</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+</urlset>
